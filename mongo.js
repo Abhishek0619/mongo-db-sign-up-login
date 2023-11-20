@@ -1,6 +1,6 @@
 const mongoose=require("mongoose")
 
-mongoose.connect("mongodb://localhost:27017/LoginFormPractice")
+mongoose.connect("mongodb://127.0.0.1:27017/MyDatabase")
 .then(()=>{
     console.log('mongoose connected');
 })
@@ -19,6 +19,6 @@ const logInSchema=new mongoose.Schema({
     }
 })
 
-const LogInCollection=new mongoose.model('LogInCollection',logInSchema)
+const collection=new mongoose.model('Collection1',logInSchema)
 
-module.exports=LogInCollection
+module.exports=collection
